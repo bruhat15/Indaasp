@@ -312,7 +312,7 @@ function App() {
               Why Join Our Workshop?
             </h2>
             {/* Scrolling Text Section */}
-    <div className="relative mt-10 overflow-hidden bg-gray-50 text-black py-2">
+    <div className="relative mt-10 overflow-hidden bg-white text-black py-2">
       <div className="whitespace-nowrap animate-marquee text-lg font-semibold">
         🚀 Skills get you internships! 🌟 Top 3-10 performers get industry expert guidance! 🎯Top 3 are trained for research paper!🔥Interview Opportunities!
       </div>
