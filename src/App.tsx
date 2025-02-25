@@ -78,7 +78,7 @@ const eventDays = [
   {
     day: "Day 3-7th March",
     events: [
-      { time: "02:00 to 03:00 PM", title: "Project Presentation", speaker: "Guest Panel", location: "Homi J Bhaba Hall },
+      { time: "02:00 to 03:00 PM", title: "Project Presentation", speaker: "Guest Panel", location: "Homi J Bhaba Hall" },
       { time: "05:00 PM", title: "Final Awards", speaker: "Ananth Pullur", location: "Homi J Bhaba Hall" }
     ]
   }
