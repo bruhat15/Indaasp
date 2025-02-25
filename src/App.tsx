@@ -8,7 +8,8 @@ import bruhatProfile from "../image/bruhat.jpg";
 import benProfile from "../image/ben.jpg";
 import ananthProfile from "../image/ananthpullur.jpg";
 import { Clock, MapPin } from "lucide-react";
-
+import MaskedAbout from "./components/MaskedAbout";
+import { Briefcase, GraduationCap, Rocket, BarChart, Users, CheckCircle } from "lucide-react";
 
 import {
   Menu,
@@ -61,24 +62,24 @@ const eventDays = [
   {
     day: "Day 1-28th Feb",
     events: [
-      { time: "02:00 to 03:00 PM", title: "Slot 1", speaker: "Ananth Pullur", location: "Satyajit Ray Hall" },
-      { time: "03:10 to 05:30 PM", title: "Slot 2", speaker: "Ananth Pullur", location: "Workshop Room A" }
+      { time: "02:00 to 03:00 PM", title: "Slot 1", speaker: "Ananth Pullur", location: "Homi J Bhaba Hall" },
+      { time: "03:10 to 05:30 PM", title: "Slot 2", speaker: "Ananth Pullur", location: "Homi J Bhaba Hall" }
     ]
   },
   {
     day: "Day 2-1st March",
     events: [
-      { time: "08:45 to 10:30 AM", title: "Slot 3", speaker: "Ananth Pullur", location: "Satyajit Ray Hall" },
-      { time: "11:00 to 1:30 PM", title: "Slot 4", speaker: "Industry Experts", location: "Satyajit Ray Hall" },
-      { time: "02:30 to 4:30 PM", title: "Slot 5", speaker: "Ananth Pullur", location: "Satyajit Ray Hall" },
-      { time: "04:45 to 6:30 PM", title: "Slot 6", speaker: "Various Leaders", location: "Satyajit Ray Hall" }
+      { time: "08:45 to 10:30 AM", title: "Slot 3", speaker: "Ananth Pullur", location: "Homi J Bhaba Hall" },
+      { time: "11:00 to 1:30 PM", title: "Slot 4", speaker: "Industry Experts", location: "Homi J Bhaba Hall" },
+      { time: "02:30 to 4:30 PM", title: "Slot 5", speaker: "Ananth Pullur", location: "Homi J Bhaba Halll" },
+      { time: "04:45 to 6:30 PM", title: "Slot 6", speaker: "Various Leaders", location: "Homi J Bhaba Hall" }
     ]
   },
   {
     day: "Day 3-7th March",
     events: [
-      { time: "02:00 to 03:00 PM", title: "Project Presentation", speaker: "Guest Panel", location: "Satyajit Ray Hall" },
-      { time: "05:00 PM", title: "Final Awards", speaker: "Ananth Pullur", location: "Satyajit Ray Hall" }
+      { time: "02:00 to 03:00 PM", title: "Project Presentation", speaker: "Guest Panel", location: "Homi J Bhaba Hall },
+      { time: "05:00 PM", title: "Final Awards", speaker: "Ananth Pullur", location: "Homi J Bhaba Hall" }
     ]
   }
 ];
@@ -331,64 +332,84 @@ function App() {
           </div>
         </section>
 
-        {/* About Workshop Section */}
-        <section id="about" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12">
-              About the Workshop
-            </h2>
-            <div className="prose prose-lg mx-auto">
-              <p className="text-gray-600 text-center max-w-3xl mx-auto">
-                Join our Python Data Science Workshop and master data analysis, visualization, and web deployment using industry-standard tools.
-                Learn to clean and process real-world datasets, create insightful visualizations, and build interactive dashboards with Pandas, Matplotlib,
-                Seaborn, and Flask. Work on live GitHub projects, collaborate with peers, and gain hands-on experience with practical coding exercises. 
-                Whether you're a beginner or looking to refine your skills, this workshop will help you turnraw data into meaningful insights! 🚀
-              </p>
-            </div>
-          </div>
-        </section>
-
-        
-        {/* Prizes Section */}
-<section id="prizes" className="py-20 bg-white">
+{/* About Workshop Section */}
+<section id="about" className="py-20 bg-gray-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-4xl font-bold text-center mb-12">Exciting Prizes</h2>
-    
-    {/* Prize Cards */}
-    <div className="grid md:grid-cols-3 gap-8">
-      <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-        <Trophy className="w-16 h-16 mx-auto mb-6 text-yellow-500" />
-        <p className="text-3xl font-bold text-gray-700 mb-2">1000$💰 WORTH</p>
-        <h3 className="text-2xl font-bold mb-4">First Prize</h3>
-        <p className="text-gray-600">
-          🎓 Personal Mentorship <br />
-          📄 Research Paper Training <br />
-          🚀 Internship Opportunities <br />
-          🌍 Industry Connect
+    <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+      About the Workshop
+    </h2>
+
+    {/* Grid Layout for Sections */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Why Are We Doing This? */}
+      <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+        <div className="flex items-center space-x-3">
+          <Rocket className="w-8 h-8 text-blue-600" />
+          <h3 className="text-2xl font-semibold text-gray-800">Why Are We Doing This?</h3>
+        </div>
+        <p className="text-gray-600 mt-4">
+          RUDRA was established just a year ago, but we’ve already made a massive impact in Data Science & Tech.
         </p>
+        <ul className="mt-4 space-y-2 text-gray-600">
+          <li>🎯 Hosted two major Ideathons with 250+ participants</li>
+          <li>🤝 Built hiring pipelines with top companies</li>
+          <li>🎓 Mentored by professionals from Cisco, Goldman Sachs & more</li>
+          <li>📈 Helped 500+ students gain internships & research roles</li>
+        </ul>
       </div>
-      <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-        <Trophy className="w-16 h-16 mx-auto mb-6 text-gray-400" />
-        <p className="text-3xl font-bold text-gray-700 mb-2">500$💰 WORTH</p>
-        <h3 className="text-2xl font-bold mb-4">Second Prize</h3>
-        <p className="text-gray-600">
-          🎓 Personal Mentorship <br />
-          🚀 Internship Opportunities <br />
-          🌍 Industry Connect
-        </p>
+
+      {/* What You'll Learn */}
+      <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+        <div className="flex items-center space-x-3">
+          <BarChart className="w-8 h-8 text-green-600" />
+          <h3 className="text-2xl font-semibold text-gray-800">What You’ll Learn</h3>
+        </div>
+        <ul className="text-gray-600 mt-4 space-y-2">
+          <li>✅ Python Basics & Data Structures</li>
+          <li>📊 Data Analysis & Visualization with Pandas & Matplotlib</li>
+          <li>🌐 Flask & Web Deployment for real-world projects</li>
+          <li>🛠 GitHub & Version Control for industry collaboration</li>
+          <li>🎯 Internship & Career Preparation</li>
+        </ul>
       </div>
-      <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-        <Trophy className="w-16 h-16 mx-auto mb-6 text-orange-500" />
-        <p className="text-3xl font-bold text-gray-700 mb-2">250$💰 WORTH</p>
-        <h3 className="text-2xl font-bold mb-4">Third Prize</h3>
-        <p className="text-gray-600">
-          🎓 Personal Mentorship <br />
-          🌍 Industry Connect
+
+      {/* Who Is This For? */}
+      <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+        <div className="flex items-center space-x-3">
+          <Users className="w-8 h-8 text-purple-600" />
+          <h3 className="text-2xl font-semibold text-gray-800">Who Is This For?</h3>
+        </div>
+        <p className="text-gray-600 mt-4">
+          This workshop is perfect for beginners and first-year engineering students who:
         </p>
+        <ul className="mt-4 space-y-2 text-gray-600">
+          <li>🔹 Want to start Data Science but don’t know where to begin</li>
+          <li>🔹 Are looking for internships but lack experience</li>
+          <li>🔹 Want to build real projects and showcase them to industry professionals</li>
+          <li>🔹 Aim to publish research papers and build a strong academic profile</li>
+        </ul>
+      </div>
+
+      {/* Workshop Outcomes */}
+      <div className="p-8 bg-white rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+        <div className="flex items-center space-x-3">
+          <CheckCircle className="w-8 h-8 text-orange-600" />
+          <h3 className="text-2xl font-semibold text-gray-800">Outcome of the Workshop</h3>
+        </div>
+        <ul className="text-gray-600 mt-4 space-y-2">
+          <li>💡 Build real-world projects & add them to your portfolio</li>
+          <li>🎓 Internship & research paper opportunities for top performers</li>
+          <li>📢 Industry interactions & expert mentorship</li>
+          <li>📜 Certificate of Completion to boost your career</li>
+          <li>🏆 Prizes & Recognition for outstanding contributions</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 
         
